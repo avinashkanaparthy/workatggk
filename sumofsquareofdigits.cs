@@ -12,14 +12,7 @@ namespace ConsoleApplication106
         {
             Console.WriteLine("Enter the string");
             int num = Convert.ToInt32(Console.ReadLine());
-            int n, rem,sum=0;
-            n = num;
-            while (n != 0)
-            {
-                rem = n % 10;
-                sum = sum + rem * rem;
-                n = n / 10;
-            }
+            double  sum = num.ToString().Sum(c =>  Math.Pow((c - '0'),2));
             Console.WriteLine("\n");
             Console.WriteLine("The sum Value={0}", sum);
             Console.ReadLine();
